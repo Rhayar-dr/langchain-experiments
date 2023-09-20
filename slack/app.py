@@ -3,11 +3,10 @@ from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 from slack_bolt.adapter.flask import SlackRequestHandler
 from slack_bolt import App
-from dotenv import find_dotenv, load_dotenv
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from functions import draft_email
+from dotenv import find_dotenv, load_dotenv
 
-# Load environment variables from .env file
 load_dotenv(find_dotenv())
 
 # Set Slack API credentials
